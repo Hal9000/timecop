@@ -1,0 +1,40 @@
+README        The file you're now reading.
+
+bigbang.rb    A program that populates the "database" with a set of
+              random tasks.
+
+clocktime.rb  A class (mostly experimental) for storing time without
+              a date.
+
+storage.rb    A primitive storage mechanism using YAML files.
+
+timecop.rb    The main file with all important definitions.
+
+test.rb       Test code to exercise parts of the API (very immature!
+              doesn't even use Test::Unit or report results).
+
+dview.rb      A primitive "daily view" program -- give it a date on the
+              command line and it responds with a list of all the tasks
+              in the database that match that day.
+
+
+Notes, Issues, Problems
+-----------------------
+
+1. When I first started to write this 3 years ago, I used an elaborate
+   inheritance model. Now I'm not using that. I'm not sure which is 
+   right. It seems simpler in some ways not to use inheritance here -- 
+   but the downside is that some objects will have attributes that are 
+   meaningless.
+
+2. Right now there is no importance, urgency, nag, warn, duration, or
+   any of that stuff.
+
+3. I *do* handle non-repeating tasks and four kinds of repeating tasks.
+
+4. I use some terminology that I borrowed from elsewhere. We can keep it
+   or toss it.
+     - a "task" is any item at all, with or without a date/time
+     - an "appointment" by nature must have a date (defaulting to "today")
+     - a "todo" item by nature cannot have a specific date
+
